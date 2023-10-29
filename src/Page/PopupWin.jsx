@@ -15,6 +15,10 @@ const PopupWin = ({ onAddGroup }) => {
   const [groupName, setGroupName] = useState("");
   const [groups, setGroups] = useState([]);
 
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  }
+
   const handleColorClick = (color) => {
     setSelectedColor(color);
   };
@@ -53,7 +57,7 @@ const PopupWin = ({ onAddGroup }) => {
 //   console.log(groups);
 
   return (
-    <div>
+    <div onClick={stopPropagation}>
       <div className="popUpBox">
         <div className="title">
           <h2>Create New Notes Group</h2>

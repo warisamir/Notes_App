@@ -13,7 +13,7 @@ const Sidebar = ({
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
-        <h1>Pocket Groups</h1>
+        <h1>Pocket Notes</h1>
       </div>
       <div className="app-sidebar-create">
         <button onClick={popUpState}>
@@ -28,7 +28,7 @@ const Sidebar = ({
             onClick={() => setActiveGroup(group.id)}
           >
             <div className="group-logo" style={{backgroundColor: group.color}}>
-              <span className="initials">CU</span>
+              <span className="initials">{group.title && group.title.substr(0, 2)}</span>
             </div>
             <div className="group-name">
               <span className="title">{group.title}</span>

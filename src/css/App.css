@@ -11,7 +11,7 @@ body {
 }
 
 .app-sidebar {
-  width: 30%;
+  width: 25vw;
   height: 100vh;
 }
 
@@ -30,7 +30,8 @@ body {
 }
 
 .app-sidebar-create {
-  margin: 30px;
+  margin: 30px 30px 20px 30px;
+  text-align: center;
 }
 
 .app-sidebar-create > button {
@@ -44,6 +45,7 @@ body {
   border-radius: 50px;
   background: #000;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .app-sidebar-create span {
@@ -51,18 +53,21 @@ body {
 }
 
 .app-sidebar-groups {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .app-sidebar-group {
-  margin: 20px 0;
+  /* margin: 0px 0 10px; */
   display: flex;
+  padding: 10px 0px 10px 15px;
+  border-radius: 20px 0 0 20px;
+  margin-bottom: 5px;
 }
 
 .group-logo {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -109,22 +114,62 @@ body {
   cursor: pointer;
 }
 
-.app-sidebar-group.active,
-.app-sidebar-group.active small {
-  background: #08c;
+.app-sidebar-group:hover {
+  background: #a4a19c;
+}
+
+.app-sidebar-group.active {
+  background: #f7ecdc;
+  padding: 10px 0px 10px 15px;
+  border-radius: 20px 0 0 20px;
 }
 
 .main-section {
-  width: 100%;
+  width: 75vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-note-body {
+.note {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.note-text {
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160.188%; /* 28.834px */
+  letter-spacing: 0.63px;
+  /* padding: 0 40px; */
+}
+
+.note-text > p {
+  margin: 5px;
+}
+
+.note-time {
+  color: #353535;
+  font-family: Roboto;
+  font-size: 13.634px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 97.688%; /* 18.204px */
+  letter-spacing: 0.373px;
+  padding: 0 0px;
+  width: 50%;
+}
+.note-time p {
+  margin-bottom: 0px;
+}
+
+/* note-body {
   width: 900px;
   height: 100px;
-}
+} */
 
 .heading {
   position: sticky;
@@ -136,22 +181,91 @@ note-body {
 }
 
 .singleGroup {
+  /* position: relative; */
   flex: 1;
-  padding: 10px;
+  padding: 30px 50px;
   overflow-y: auto;
+  background: #f7ecdc;
+}
+
+.no-active-group {
+  width: 75vw;
+  background: #f7ecdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  width: 500px;
+  text-align: center;
+}
+
+.no-active-group h1 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 1px;
+}
+
+.no-active-group p {
+  color: #292929;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 145.455% */
+  letter-spacing: 0.44px;
+}
+
+.encrypted {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+
+.encrypted img {
+    width: 10px;
+    margin: 0 5px;
+}
+
+.encrypted span {
+  color: #292929;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 145.455% */
+  letter-spacing: 0.44px;
+}
+
+.notes-img {
+  width: 400px;
 }
 
 .newGroupInput {
   position: sticky;
-  bottom: 20px;
+  bottom: 30px;
   z-index: 1;
   padding: 20px;
   background: #e8e8e8;
+  border-radius: 0px 0 0 20px;
+}
+
+.create-note-btn {
+  position: absolute;
+  top: 70%;
+  right: 3%;
 }
 
 #note-body {
-    width: 950px;
-    height: 100px;
+  /* position: relative; */
+  width: 970px;
+  height: 100px;
   /* margin: 20px; */
   resize: none;
   padding: 20px;
@@ -169,4 +283,14 @@ note-body {
   border: none;
   border-radius: 10px;
   outline: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  z-index: 100; /* Adjust the z-index to make it appear above other content */
 }
