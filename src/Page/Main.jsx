@@ -89,7 +89,8 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import notesImg from "../img/notesImg.png";
-import vector from "../img/Vector.svg"
+import vector from "../img/Vector.svg";
+import vectorSave from "../img/Vector-save.svg";
 // import "./Main.css";
 
 export default function Main({ activeGroup, onUpdateGroup }) {
@@ -126,12 +127,21 @@ export default function Main({ activeGroup, onUpdateGroup }) {
         ...activeGroup,
         notes: [...activeGroup.notes, newNote],
       };
+      // console.log(updatedGroup);
 
       // Call the onUpdateGroup function to update the group in the App component's state
       onUpdateGroup(updatedGroup);
 
       // Clear the note text field
       setNoteText("");
+    }
+  };
+
+  const handleTextareaKeyPress = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      // Check if the pressed key is "Enter" without the shift key
+      e.preventDefault(); // Prevent the default newline behavior
+      handleAddNote(); // Call the function to save the note
     }
   };
 
@@ -191,9 +201,11 @@ export default function Main({ activeGroup, onUpdateGroup }) {
           placeholder="Enter your text here..."
           value={noteText}
           onChange={handleNoteTextChange}
+          onKeyDown={handleTextareaKeyPress}
+          autoFocus
         ></textarea>
         <button className="create-note-btn" onClick={handleAddNote}>
-          Add Note
+          <img src={vectorSave} alt="save-btn" />
         </button>
       </div>
     </div>

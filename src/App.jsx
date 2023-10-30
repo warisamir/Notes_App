@@ -58,7 +58,7 @@
 //   );
 // }
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/App.css";
 import Sidebar from "./Page/Sidebar";
 import Main from "./Page/Main";
@@ -70,6 +70,10 @@ export default function App() {
   const [PopUpOpen, setPopUpOpen] = useState(false);
   const [activeGroup, setActiveGroup] = useState(null); // activeGroup should be an object
   const [groupName, setGroupName] = useState("");
+
+  // useEffect(() => {
+  //   localStorage.setItem("Groups", JSON.stringify(groups))
+  // }, [groups])
 
   const onAddGroup = (groupName, selectedColor) => {
     const newGroup = {
@@ -95,7 +99,7 @@ export default function App() {
 
   const closePopUp = () => {
     setPopUpOpen(false);
-  }
+  };
 
   return (
     <div className="App">
