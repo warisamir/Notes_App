@@ -1,7 +1,14 @@
+.popUpBox-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .popUpBox {
-  position: absolute;
-  top: 30%;
-  left: 37%;
+  /* position: absolute; */
+  /* top: 30%; */
+  /* left: 37%; */
   /* background-color: rgba(0, 0, 0, 0.2); */
   box-shadow:rgba(0,0,0) 1px 3px 10px;
   padding: 10px 30px;
@@ -96,3 +103,46 @@ label {
     justify-content: center;
     align-items: center;
 } */
+
+@media (max-width: 426px) {
+  .popUpBox {
+    font-size: 18px;
+    padding: 10px 16px;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+  }
+
+  .title h2 {
+    font-size: 25px;
+    letter-spacing: 0.8px;
+  }
+
+  label {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .text-input {
+    padding: 8px 15px;
+    width: 53%;
+    font-size: 16px;
+  }
+
+  .colorOption {
+    width: 21px;
+    height: 21px;
+    margin: 4px;
+  }
+
+  .btn-box {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .create-btn {
+    width: 230px;
+    padding: 8px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}

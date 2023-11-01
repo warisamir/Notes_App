@@ -202,7 +202,6 @@ export default function Main({ activeGroup, onUpdateGroup }) {
           value={noteText}
           onChange={handleNoteTextChange}
           onKeyDown={handleTextareaKeyPress}
-          autoFocus
         ></textarea>
         <button className="create-note-btn" onClick={handleAddNote}>
           <img src={vectorSave} alt="save-btn" />

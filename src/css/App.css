@@ -13,6 +13,7 @@ body {
 .app-sidebar {
   width: 25vw;
   height: 100vh;
+  overflow-y: auto;
 }
 
 .app-sidebar-header {
@@ -255,14 +256,14 @@ body {
   position: sticky;
   bottom: 30px;
   z-index: 1;
-  padding: 20px;
+  padding: 15px;
   background: #e8e8e8;
   border-radius: 0px 0 0 20px;
 }
 
 .create-note-btn {
   position: absolute;
-  top: 70%;
+  bottom: 20%;
   right: 3%;
   border: none;
   outline: none;
@@ -286,24 +287,27 @@ body {
 
 #note-body {
   /* position: relative; */
-  width: 970px;
-  height: 100px;
+  width: 92.5%;
+  height: 140px;
   /* margin: 20px; */
   resize: none;
-  padding: 20px;
+  padding: 10px 45px 10px 30px;
+  /* padding:0 0 0 10px; */
+  /* overflow-y: auto; */
 }
 
 #note-body {
   /* typography */
   /* color: #9a9a9a; */
   /* color: #ea1616; */
+  color: #000000b3;
   font-family: Roboto;
   font-size: 16.816px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.596px;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   outline: none;
 }
@@ -316,4 +320,76 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
   z-index: 100; /* Adjust the z-index to make it appear above other content */
+}
+
+@media (max-width: 670px) {
+    .no-active-group {
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .app-sidebar {
+        width: 100%;
+    }
+
+    .app-sidebar-header {
+        margin-left: 30px;
+    }
+
+    .app-sidebar-header h1 {
+        font-size: 40px;
+        /* text-align: center; */
+    }
+
+    .app-sidebar-create button {
+        width: 100%;
+        font-size: 23px;
+        padding: 13px;
+    }
+
+    /* .modal-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .popUpBox {
+        width: 330px; 
+    }
+
+    .group-logo {
+        width: 50px;
+        height: 50px;
+        /* padding: 0; */
+    }
+
+    .initials {
+        font-size: 22px;
+    }
+
+    .group-name {
+        margin-left: 25px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .main-section {
+        width: 100vw;
+    }
+
+    .singleGroup {
+        padding: 10px;
+    }
+
+    .newGroupInput {
+        width: 40vw;
+        /* height: 50vh; */
+    }
+
+    .app-sidebar-group {
+        background: #a4a19c;
+    }
 }

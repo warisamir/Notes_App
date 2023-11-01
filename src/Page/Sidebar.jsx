@@ -10,6 +10,13 @@ const Sidebar = ({
   const popUpState = () => {
     setPopUpOpen(true);
   };
+
+  // const styles = {
+  //   display: "block"
+  // };
+  // if (window.innerWidth < 426) {
+  //   styles.display = "none";
+  // }
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">

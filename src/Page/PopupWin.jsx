@@ -57,8 +57,8 @@ const PopupWin = ({ onAddGroup }) => {
 //   console.log(groups);
 
   return (
-    <div onClick={stopPropagation}>
-      <div className="popUpBox">
+    <div className="popUpBox-cont" >
+      <div className="popUpBox popUpBoxS" onClick={stopPropagation}>
         <div className="title">
           <h2>Create New Notes Group</h2>
         </div>
