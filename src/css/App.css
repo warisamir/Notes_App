@@ -229,6 +229,9 @@ body {
 
 .encrypted img {
   width: 10px;
+  height: 32px;
+  /* background: transparent; */
+  /* border: none; */
   margin: 0 5px;
 }
 
@@ -243,6 +246,7 @@ body {
 
 .notes-img {
   width: 400px;
+  height: 200px;
 }
 
 .newGroupInput {
