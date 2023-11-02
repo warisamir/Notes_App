@@ -60,9 +60,9 @@
 
 import React, { useEffect, useState } from "react";
 import "./css/App.css";
-import Sidebar from "./Page/Sidebar";
-import Main from "./Page/Main";
-import PopupWin from "./Page/PopupWin";
+import Sidebar from "./Pages/SidebarSection";
+import Main from "./Pages/MainSection";
+import PopupWin from "./Pages/PopupSection";
 import { v4 as uuidv4 } from "uuid";
 
 export default function App() {
