@@ -14,7 +14,7 @@ Most notes app create individual notes but often times we may need to create not
   From the repo:
 1. Use `git clone` to download the project locally.
     * cd into project directory
-    * Run `git clone https://github.com/devbrothonath/Notify.git` on terminal
+    * Run `git clone https://github.com/warisamir/Notes_App.git` on terminal
 
   Live Version :
-* Deployed the application on vercel. You can check it out here : [Notify](https://react-module-test-iota.vercel.app/)
+* Deployed the application on vercel. You can check it out here : [Notify](https://notes-app-gamma-mocha.vercel.app/)
