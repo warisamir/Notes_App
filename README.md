@@ -2,7 +2,7 @@
 ## Overview
 An app to organize notes into unique groups, allowing users to create custom groups and associate relevant notes with each group.
 
-## Why?
+## Reason to create this App?
 Most notes app create individual notes but often times we may need to create notes that are relevant to a single topic, say your physics assignment notes. You may need to create different type of notes related to the assignment so creating a single group where all these different notes can be stored is where Notify comes in.
 
 ## Features
